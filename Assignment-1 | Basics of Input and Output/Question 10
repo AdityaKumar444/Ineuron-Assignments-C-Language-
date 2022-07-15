@@ -1,0 +1,11 @@
+#include<stdio.h>
+#include<conio.h>
+int main()
+{
+int D , M , Y ;
+printf("Enter date , month and year : \n");
+scanf("%d %d %d" , &D , &M , &Y);
+printf("Original date in DD-MM-YYYY format– %d/%d/%d \n" , D,M,Y);
+printf("converted date format is Day – %d ,Month – %d , Year – %d \n" , D , M , Y ) ;
+getch();
+}
