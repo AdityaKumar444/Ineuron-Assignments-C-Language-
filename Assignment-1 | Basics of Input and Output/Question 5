@@ -1,0 +1,8 @@
+#include<stdio.h>
+#include<conio.h>
+int main()
+{
+    int x = printf("Rajasthan");
+    printf("\nLength of \"Rajasthan\" is %d " , x);
+getch();
+}
