@@ -1,0 +1,9 @@
+#include<stdio.h>
+#include<conio.h>
+int main()
+{
+char d = '%' , e = 'd' ;
+printf("%c%c",d,e) ;
+getch();
+}
+
