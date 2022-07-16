@@ -1,0 +1,8 @@
+#include <stdio.h>
+int main()
+{
+    int H , M ;
+    printf("Enter time in HH:MM : ") ;
+    scanf("%d %d" , &H , &M);
+    printf("\"%d:%d\" converted to \"%d Hour and %d Minutes\"" , H , M , H , M);
+}
