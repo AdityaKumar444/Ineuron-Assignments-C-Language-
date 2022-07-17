@@ -1,0 +1,13 @@
+#include <stdio.h>
+int main()
+{
+    int x ;
+    x = sizeof(double);
+    printf("size of double type variable is %d" , x);
+    x = sizeof(float);
+    printf("\nsize of float type variable is %d" , x);
+    x = sizeof(int);
+    printf("\nsize of int type variable is %d" , x);
+    x = sizeof(char);
+    printf("\nsize of char type variable is %d" , x);
+}

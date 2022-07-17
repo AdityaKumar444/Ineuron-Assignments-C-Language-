@@ -1,0 +1,11 @@
+#include <stdio.h>
+int main()
+{
+printf("Enter a number : ") ;
+int a , last_digit;
+scanf("%d",&a);
+last_digit = a / 10 ;
+printf("\n%d",last_digit);
+return 0;
+}
+

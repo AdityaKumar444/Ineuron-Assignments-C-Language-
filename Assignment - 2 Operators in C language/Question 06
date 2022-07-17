@@ -1,0 +1,11 @@
+#include <stdio.h>
+int main()
+{
+printf("Enter a character : ") ;
+char ch ;
+scanf("%c",&ch);
+printf("\nascii code is %d",ch);
+
+return 0;
+}
+
