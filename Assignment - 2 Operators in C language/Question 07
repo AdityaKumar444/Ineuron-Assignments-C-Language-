@@ -1,0 +1,14 @@
+#include <stdio.h>
+int main()
+{
+    int x = 10 , count = 0 , result = 0 ;
+    result = x & 1 ;
+    count++ ;
+    if(result==1)
+    printf("position of first 1 in LSB is %d" , count);
+    x=x>>1 ;
+    result = x & 1 ;
+    count++ ;
+    if(result==1)
+    printf("position of first 1 in LSB is %d" , count);
+}
