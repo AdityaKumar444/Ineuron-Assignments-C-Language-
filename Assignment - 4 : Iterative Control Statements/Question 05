@@ -1,0 +1,13 @@
+#include <stdio.h>
+int main()
+{
+    int a = 19 ;
+    printf("\nThe first 10 odd natural numbers in reverse order are : \n");
+    while(a>=1)
+    {
+        printf("%d " , a);
+        a = a - 2 ;
+    }
+    printf("\n");
+    return 0;
+}

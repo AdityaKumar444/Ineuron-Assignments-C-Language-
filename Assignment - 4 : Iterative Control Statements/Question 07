@@ -1,0 +1,13 @@
+#include <stdio.h>
+int main()
+{
+    int a = 20 ;
+    printf("\nThe first 10 even natural numbers in reverse order are : \n");
+    while(a>=2)
+    {
+        printf("%d " , a);
+        a = a - 2 ;
+    }
+    printf("\n");
+    return 0;
+}

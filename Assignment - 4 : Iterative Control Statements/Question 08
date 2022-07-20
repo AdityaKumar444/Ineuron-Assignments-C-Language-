@@ -1,0 +1,14 @@
+#include <stdio.h>
+int main()
+{
+    int a = 1 , b ;
+    printf("\nThe squares of first 10 natural numbers are : \n");
+    while(a<=10)
+    {
+        b = a * a ;
+        printf("%d " , b);
+        a++ ;
+    }
+    printf("\n");
+    return 0;
+}
