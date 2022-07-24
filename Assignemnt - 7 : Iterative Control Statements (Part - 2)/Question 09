@@ -1,0 +1,33 @@
+#include<stdio.h>
+int main ()  
+{
+    int x , sum = 0 , k , temp , j;
+    printf("Enter a number : ") ;
+    scanf("%d" , &x) ;
+    // count digits in the number
+    temp = x ;
+    for( j = 0 ; temp != 0 ; j++ )
+    {
+        temp = temp / 10 ;
+    
+    }
+    
+    // main code for summation of digits
+    
+    for(int i = x ; i>0 ; )
+    {
+        k = 1 ;
+        // loop for powering the digits
+        for(int b=j ; b!=0 ; b--)
+        {
+            k = k * (i % 10) ;
+        }
+        sum = sum + k ;
+        i = i / 10 ;
+    }
+    if(sum==x)
+    printf("\n%d is an armstrong number\n" ,x) ;
+    else
+    printf("\n%d is not an armstrong number\n" ,x) ;
+    return 0 ;
+}

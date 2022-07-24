@@ -1,0 +1,23 @@
+#include <stdio.h>
+int main()
+{
+    int x , y , i , a , limit ;
+    printf("Enter two numbers : ") ;
+    scanf("%d%d" , &x , &y) ;
+    if(x<y)
+    limit = x ;
+    else 
+    limit = y ;
+    for (i = 1 ; i <= limit ; i++)
+    {
+        if( (x%i==0 && y%i==0) )
+        {
+        a = i ;
+        }
+    }
+    if(a==1)
+    printf("\n%d and %d are co-prime numbers" , x , y);
+    else
+    printf("\n%d and %d are not co-prime numbers" , x , y);
+    return 0;
+}
