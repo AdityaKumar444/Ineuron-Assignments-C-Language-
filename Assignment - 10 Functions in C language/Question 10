@@ -15,7 +15,6 @@ void prime_factor(int n)
     {
         while(n%i==0)
         {
-            if(n%i==0)
             printf("%d " ,i);
             n = n / i ;
         }
