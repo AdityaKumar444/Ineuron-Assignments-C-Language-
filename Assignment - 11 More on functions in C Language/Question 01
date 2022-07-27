@@ -1,0 +1,19 @@
+#include <stdio.h>
+int LCM(int , int);
+int main()
+{
+    int a , b , lcm ;
+    printf("Enter two numbers : ");
+    scanf("%d%d", &a , &b);
+    lcm = LCM(a,b);
+    printf("\nLCM of %d and %d is %d" , a , b , lcm);
+}
+
+int LCM(int a , int b)
+{
+    for (int i=1 ; i<=(a*b) ; i++) 
+    {
+        if(i%a==0 && i%b==0)
+        return i ;
+    }
+}

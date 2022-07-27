@@ -1,0 +1,19 @@
+#include <stdio.h>
+int HCF(int , int);
+int main()
+{
+    int a , b , hcf ;
+    printf("Enter two numbers : ");
+    scanf("%d%d", &a , &b);
+    hcf = HCF(a,b);
+    printf("\nHCF of %d and %d is %d" , a , b , hcf);
+}
+
+int HCF(int a , int b)
+{
+    for (int i=(a<b?a:b) ; i>=1 ; i--) 
+    {
+        if(a%i==0 && b%i==0)
+        return i ;
+    }
+}
