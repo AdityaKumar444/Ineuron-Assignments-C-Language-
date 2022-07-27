@@ -1,0 +1,27 @@
+#include <stdio.h>
+int contains_digit(int , int);
+int main()
+{
+    int n , digit , k ;
+    printf("Enter a number : ");
+    scanf("%d" , &n);
+    printf("\nEnter the digit which is to be searched : ");
+    scanf("%d" , &digit);
+    k = contains_digit(n,digit);
+    if(k==1)
+    printf("\nnumber %d contains digit %d" , n , digit);
+    else
+    printf("\nnumber %d doesn't contain digit %d" , n , digit);
+}
+
+int contains_digit(int n , int digit)
+{
+    int s ;
+    for (int i = n ; i!=0 ; ) 
+    {
+        s = i % 10 ;
+        if(s==digit)
+        return 1 ;
+        i = i / 10 ;
+    }
+}

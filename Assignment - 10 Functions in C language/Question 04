@@ -1,0 +1,20 @@
+#include<stdio.h>
+#include<conio.h>
+void natural_numbers(int);
+int main ()  
+{
+    int a ;
+    printf("Enter a number : ") ;
+    scanf("%d" , &a) ;
+    natural_numbers(a) ;
+    getch() ;
+}
+void natural_numbers(int n)
+{
+    printf("\nThe first %d natural numbers are : \n" ,n);
+    for (int i = 1 ; i<=n ; i++)
+    {
+        printf("%d " , i) ;
+    }
+    printf("\n") ;
+}

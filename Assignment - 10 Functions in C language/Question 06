@@ -1,0 +1,19 @@
+#include<stdio.h>
+#include<conio.h>
+int factorial(int);
+int main ()  
+{
+    int a , b ;
+    printf("Enter a number : ") ;
+    scanf("%d" , &a) ;
+    b = factorial(a) ;
+    printf("Factorial of %d is %d \n" , a , b ) ;
+    getch() ;
+}
+int factorial(int n)
+{
+    int f = 1 ;
+    for (int i=n ; i>0 ; i--)
+    f = f * i ;
+    return f ;
+} 

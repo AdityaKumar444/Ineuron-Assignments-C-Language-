@@ -1,0 +1,17 @@
+#include<stdio.h>
+#include<conio.h>
+float simple_interest(float , float , float);
+int main ()  
+{
+    float p , r , t , SI;
+    printf("Enter principal , rate , time : ") ;
+    scanf("%f%f%f",&p,&r,&t) ;
+    SI = simple_interest(p,r,t);
+    printf("\nSimple Interest is %f",SI);
+    getch();
+}
+float simple_interest(float p , float r , float t)
+{
+    float SI = ( p * r * t ) / 100 ;
+    return SI ;
+}

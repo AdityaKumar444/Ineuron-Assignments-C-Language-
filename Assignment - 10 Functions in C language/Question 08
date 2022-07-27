@@ -1,0 +1,22 @@
+#include<stdio.h>
+#include<conio.h>
+int permutation(int,int);
+int main ()  
+{
+    int a , n , r ;
+    printf("Enter n items and r selections : ") ;
+    scanf("%d%d" , &n , &r) ;
+    a = permutation(n,r) ;
+    printf("Number of arrangements is %d \n" , a ) ;
+    getch() ;
+}
+int permutation(int n , int r)
+{
+    int p , n1 = 1 , n2 = 1 ;
+    for (int i = n ; i>0 ; i--)
+    n1 = n1 * i ;
+    for (int j = n-r ; j>0 ; j--)
+    n2 = n2 * j ;
+    p = n1/n2 ;
+    return p ;
+} 
