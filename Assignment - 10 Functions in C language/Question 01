@@ -1,0 +1,17 @@
+#include<stdio.h>
+#include<conio.h>
+float area_of_circle(float);
+int main ()  
+{
+    float a , x ;
+    printf("Enter radius of circle : ") ;
+    scanf("%f" , &x) ;
+    a = area_of_circle(x) ;
+    printf("Area of circle is %f \n" , a) ;
+    getch() ;
+}
+float area_of_circle(float r)
+{
+    float s = 3.14*r*r ;
+    return s ;
+}
