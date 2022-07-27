@@ -11,7 +11,7 @@ int main()
 
 int LCM(int a , int b)
 {
-    for (int i=1 ; i<=(a*b) ; i++) 
+    for (int i=(a>b?a:b) ; i<=(a*b) ; i++) 
     {
         if(i%a==0 && i%b==0)
         return i ;
