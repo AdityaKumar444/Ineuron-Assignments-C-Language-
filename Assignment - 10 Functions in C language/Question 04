@@ -1,14 +1,8 @@
 #include<stdio.h>
 #include<conio.h>
 void natural_numbers(int);
-int main ()  
-{
-    int a ;
-    printf("Enter a number : ") ;
-    scanf("%d" , &a) ;
-    natural_numbers(a) ;
-    getch() ;
-}
+
+// function to print first N natural numbers (TSRN)
 void natural_numbers(int n)
 {
     printf("\nThe first %d natural numbers are : \n" ,n);
@@ -17,4 +11,14 @@ void natural_numbers(int n)
         printf("%d " , i) ;
     }
     printf("\n") ;
+}
+
+// Driver program
+int main ()  
+{
+    int a ;
+    printf("Enter a number : ") ;
+    scanf("%d" , &a) ;
+    natural_numbers(a) ;
+    getch() ;
 }
