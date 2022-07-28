@@ -1,6 +1,17 @@
 #include<stdio.h>
 #include<conio.h>
 int factorial(int);
+
+// function to calculate the factorial of a number. (TSRS)
+int factorial(int n)
+{
+    int f = 1 ;
+    for (int i=n ; i>0 ; i--)
+    f = f * i ;
+    return f ;
+}
+
+// Driver program
 int main ()  
 {
     int a , b ;
@@ -10,10 +21,3 @@ int main ()
     printf("Factorial of %d is %d \n" , a , b ) ;
     getch() ;
 }
-int factorial(int n)
-{
-    int f = 1 ;
-    for (int i=n ; i>0 ; i--)
-    f = f * i ;
-    return f ;
-} 
