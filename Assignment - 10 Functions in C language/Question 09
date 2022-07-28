@@ -1,5 +1,22 @@
 #include <stdio.h>
 int contains_digit(int , int);
+
+// function to check whether a given number contains a given digit or not.
+(TSRS)
+
+int contains_digit(int n , int digit)
+{
+    int s ;
+    for (int i = n ; i!=0 ; ) 
+    {
+        s = i % 10 ;
+        if(s==digit)
+        return 1 ;
+        i = i / 10 ;
+    }
+}
+
+// Driver program
 int main()
 {
     int n , digit , k ;
@@ -12,16 +29,4 @@ int main()
     printf("\nnumber %d contains digit %d" , n , digit);
     else
     printf("\nnumber %d doesn't contain digit %d" , n , digit);
-}
-
-int contains_digit(int n , int digit)
-{
-    int s ;
-    for (int i = n ; i!=0 ; ) 
-    {
-        s = i % 10 ;
-        if(s==digit)
-        return 1 ;
-        i = i / 10 ;
-    }
 }
