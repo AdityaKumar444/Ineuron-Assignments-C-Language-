@@ -1,6 +1,8 @@
 #include<stdio.h>
 #include<conio.h>
 void N_odd_natural(int);
+
+// Driver program
 int main ()  
 {
     int a ;
@@ -9,6 +11,8 @@ int main ()
     N_odd_natural(a) ;
     getch() ;
 }
+
+// function to print first N odd natural numbers. (TSRN)
 void N_odd_natural(int n)
 {
     printf("\nThe first %d odd natural numbers are :\n" , n);
