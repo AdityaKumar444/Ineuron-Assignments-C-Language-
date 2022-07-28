@@ -1,15 +1,11 @@
 #include<stdio.h>
 #include<conio.h>
 int permutation(int,int);
-int main ()  
-{
-    int a , n , r ;
-    printf("Enter n items and r selections : ") ;
-    scanf("%d%d" , &n , &r) ;
-    a = permutation(n,r) ;
-    printf("Number of arrangements is %d \n" , a ) ;
-    getch() ;
-}
+
+
+// function to calculate the number of arrangements one can make from n items
+and r selected at a time. (TSRS)
+
 int permutation(int n , int r)
 {
     int p , n1 = 1 , n2 = 1 ;
@@ -20,3 +16,14 @@ int permutation(int n , int r)
     p = n1/n2 ;
     return p ;
 } 
+
+// Driver program
+int main ()  
+{
+    int a , n , r ;
+    printf("Enter n items and r selections : ") ;
+    scanf("%d%d" , &n , &r) ;
+    a = permutation(n,r) ;
+    printf("Number of arrangements is %d \n" , a ) ;
+    getch() ;
+}
