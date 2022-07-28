@@ -1,15 +1,10 @@
 #include<stdio.h>
 #include<conio.h>
 int combinations(int,int);
-int main ()  
-{
-    int a , n , r ;
-    printf("Enter n items and r selections : ") ;
-    scanf("%d%d" , &n , &r) ;
-    a = combinations(n,r) ;
-    printf("Number of combinations is %d \n" , a ) ;
-    getch() ;
-}
+
+// function to calculate the number of combinations one can make from n items
+and r selected at a time. (TSRS)
+
 int combinations(int n , int r)
 {
     int c , n1 = 1 , n2 = 1 , n3 = 1 ;
@@ -21,4 +16,15 @@ int combinations(int n , int r)
     n3 = n3 * k ;
     c = n1/(n2*n3) ;
     return c ;
+}
+
+// Driver program
+int main ()  
+{
+    int a , n , r ;
+    printf("Enter n items and r selections : ") ;
+    scanf("%d%d" , &n , &r) ;
+    a = combinations(n,r) ;
+    printf("Number of combinations is %d \n" , a ) ;
+    getch() ;
 }
