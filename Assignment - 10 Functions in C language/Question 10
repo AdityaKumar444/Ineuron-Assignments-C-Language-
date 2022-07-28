@@ -1,12 +1,7 @@
 #include <stdio.h>
 void prime_factor(int);
-int main()
-{
-    int n ;
-    printf("Enter a number : ");
-    scanf("%d" , &n);
-    prime_factor(n);
-}
+
+// function to print all prime factors of a given number.(TSRN)
 
 void prime_factor(int n)
 {
@@ -19,4 +14,14 @@ void prime_factor(int n)
             n = n / i ;
         }
     }
+}
+
+// Driver program
+
+int main()
+{
+    int n ;
+    printf("Enter a number : ");
+    scanf("%d" , &n);
+    prime_factor(n);
 }
