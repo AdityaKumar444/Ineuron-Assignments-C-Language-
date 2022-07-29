@@ -1,13 +1,6 @@
-#include <stdio.h>
 int LCM(int , int);
-int main()
-{
-    int a , b , lcm ;
-    printf("Enter two numbers : ");
-    scanf("%d%d", &a , &b);
-    lcm = LCM(a,b);
-    printf("\nLCM of %d and %d is %d" , a , b , lcm);
-}
+
+// function to calculate LCM of two numbers. (TSRS)
 
 int LCM(int a , int b)
 {
