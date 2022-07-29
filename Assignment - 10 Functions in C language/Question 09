@@ -1,4 +1,3 @@
-#include <stdio.h>
 int contains_digit(int , int);
 
 // function to check whether a given number contains a given digit or not.
@@ -14,19 +13,4 @@ int contains_digit(int n , int digit)
         return 1 ;
         i = i / 10 ;
     }
-}
-
-// Driver program
-int main()
-{
-    int n , digit , k ;
-    printf("Enter a number : ");
-    scanf("%d" , &n);
-    printf("\nEnter the digit which is to be searched : ");
-    scanf("%d" , &digit);
-    k = contains_digit(n,digit);
-    if(k==1)
-    printf("\nnumber %d contains digit %d" , n , digit);
-    else
-    printf("\nnumber %d doesn't contain digit %d" , n , digit);
 }
