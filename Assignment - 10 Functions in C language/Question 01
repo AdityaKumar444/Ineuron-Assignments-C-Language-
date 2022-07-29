@@ -1,21 +1,10 @@
-#include<stdio.h>
-#include<conio.h>
+
 float area_of_circle(float);
 
 // function to calculate the area of a circle. (TSRS)
+
 float area_of_circle(float r)
 {
     float s = 3.14*r*r ;
     return s ;
-}
-
-// Driver program
-int main ()  
-{
-    float a , x ;
-    printf("Enter radius of circle : ") ;
-    scanf("%f" , &x) ;
-    a = area_of_circle(x) ;
-    printf("Area of circle is %f \n" , a) ;
-    getch() ;
 }
