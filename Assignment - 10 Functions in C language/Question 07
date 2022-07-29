@@ -1,5 +1,3 @@
-#include<stdio.h>
-#include<conio.h>
 int combinations(int,int);
 
 // function to calculate the number of combinations one can make from n items
@@ -16,15 +14,4 @@ int combinations(int n , int r)
     n3 = n3 * k ;
     c = n1/(n2*n3) ;
     return c ;
-}
-
-// Driver program
-int main ()  
-{
-    int a , n , r ;
-    printf("Enter n items and r selections : ") ;
-    scanf("%d%d" , &n , &r) ;
-    a = combinations(n,r) ;
-    printf("Number of combinations is %d \n" , a ) ;
-    getch() ;
 }
