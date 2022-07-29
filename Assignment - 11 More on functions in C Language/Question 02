@@ -1,13 +1,6 @@
-#include <stdio.h>
 int HCF(int , int);
-int main()
-{
-    int a , b , hcf ;
-    printf("Enter two numbers : ");
-    scanf("%d%d", &a , &b);
-    hcf = HCF(a,b);
-    printf("\nHCF of %d and %d is %d" , a , b , hcf);
-}
+
+// function to calculate HCF of two numbers. (TSRS)
 
 int HCF(int a , int b)
 {
