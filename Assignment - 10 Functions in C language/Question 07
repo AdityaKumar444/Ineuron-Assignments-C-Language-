@@ -1,7 +1,7 @@
 int combinations(int,int);
 
-// function to calculate the number of combinations one can make from n items
-and r selected at a time. (TSRS)
+/* function to calculate the number of combinations one can make from n items
+and r selected at a time. (TSRS) */
 
 int combinations(int n , int r)
 {
