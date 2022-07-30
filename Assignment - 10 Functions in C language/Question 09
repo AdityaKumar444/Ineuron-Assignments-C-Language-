@@ -1,7 +1,6 @@
 int contains_digit(int , int);
 
-// function to check whether a given number contains a given digit or not.
-(TSRS)
+// function to check whether a given number contains a given digit or not. (TSRS)
 
 int contains_digit(int n , int digit)
 {
