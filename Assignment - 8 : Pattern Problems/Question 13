@@ -1,0 +1,29 @@
+#include<stdio.h>
+int main()
+{
+    int i , j , a ;
+    for (int i=1 ; i<=7 ; i++)
+    {
+        a = 'A' ;
+        for (int j=1 ; j<=13 ; j++)
+        {
+            if(j<=8-i || j>=6+i)
+            {
+                if(j<=7)
+                {
+                    printf("%c",a);
+                    a++;
+                }
+                else if(j==8 && i==1)
+                --a;
+
+                if(j>7)
+                printf("%c",--a);
+            }
+            else
+            printf(" ");
+        }
+        printf("\n");
+    }
+    return 0 ;
+}
