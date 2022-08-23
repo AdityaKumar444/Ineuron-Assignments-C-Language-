@@ -1,0 +1,21 @@
+#include<stdio.h>
+void square(int);
+
+// function to calculate the square of any number 
+
+void square(int n)
+{
+    int s ;
+    s = n * n ;
+    printf("\nSquare of %d is %d" , n , s) ;
+}
+
+// Driver program
+
+int main () 
+{ 
+    int n ;
+    printf("Enter a number to find square of it : ") ;
+    scanf("%d" , &n) ;
+    square(n);
+}

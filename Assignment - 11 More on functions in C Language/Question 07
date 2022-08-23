@@ -1,0 +1,29 @@
+#include<stdio.h>
+void fibonacci(int);
+
+// function to print first N terms of Fibonacci series (TSRN)
+
+void fibonacci(int n)
+{
+    int  n1 = -1 , n2 = 1 , i = 1 , Nth ;
+    printf("\nFirst %d terms of fibonacci series are :\n" ,n) ;
+    while (i<=n)
+    {
+        Nth = n1 + n2 ;
+        n1 = n2 ;
+        n2 = Nth ;
+        i++ ;
+        printf("%d " , Nth) ;
+    }
+}
+
+// Driver program
+
+int main () 
+{ 
+    int n ;
+    printf("Enter number of terms for fibonacci series : ") ;
+    scanf("%d" , &n) ;
+    fibonacci(n);
+}
+

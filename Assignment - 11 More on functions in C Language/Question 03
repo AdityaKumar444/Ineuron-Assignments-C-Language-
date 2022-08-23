@@ -1,0 +1,37 @@
+#include<stdio.h>
+#include<conio.h>
+int prime_or_not(int);
+
+// function to check whether a given number is Prime or not. (TSRS)
+
+int prime_or_not(int n)
+{
+    int k = 0 ;
+    for(int i=2 ; i<n ; i++)
+    {
+        if(n%i==0)
+        {
+        k++ ;
+        break;
+        }
+    }
+    if(k==1)
+    return 0 ;
+    else
+    return 1 ;
+}
+
+// Driver program
+
+int main ()  
+{
+    int a , b ;
+    printf("Enter a number : ") ;
+    scanf("%d" , &a) ;
+    b = prime_or_not(a) ;
+    if(b==1)
+    printf("\n%d is prime\n" , a);
+    else
+    printf("\n%d is not prime\n" , a);
+    getch() ;
+}

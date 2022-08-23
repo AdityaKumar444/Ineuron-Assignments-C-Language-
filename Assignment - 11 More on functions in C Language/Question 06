@@ -1,0 +1,35 @@
+#include<stdio.h>
+#include<conio.h>
+void allPrime_bw_two(int,int);
+
+// function to print all Prime numbers between two given numbers. (TSRN)
+
+void allPrime_bw_two(int n1 , int n2)
+{
+    printf("\nPrime numbers between %d and %d are : \n" , n1 , n2);
+    for (int i=n1+1; i<n2; i++)
+    {
+    int k = 0 ;
+    for(int j=2 ; j<i ; j++)
+    {
+        if(i%j==0)
+        {
+        k++ ;
+        break;
+        }
+    }
+    if(k==0)
+    printf("%d " , i) ;
+    }
+}
+
+// Driver program
+
+int main ()  
+{
+    int a , b ;
+    printf("Enter two numbers to print all prime numbers between them : ") ;
+    scanf("%d%d" , &a , &b) ;
+    allPrime_bw_two(a,b) ;
+    getch() ;
+}
