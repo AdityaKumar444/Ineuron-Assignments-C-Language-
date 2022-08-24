@@ -1,0 +1,14 @@
+#include<stdio.h>
+int main()
+{
+    int i , a[10] , smallest = 2147483647 ;
+    printf("Enter 10 elements : ");
+    for (i=0; i<=9; i++)
+    {
+        scanf("%d",&a[i]);
+        if(smallest>a[i])
+        smallest = a[i];
+    }
+    printf("smallest number is %d" , smallest);
+    return 0 ;
+}

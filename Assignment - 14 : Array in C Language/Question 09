@@ -1,0 +1,18 @@
+#include <stdio.h>
+int main()
+{
+    int i , j , a[99999] , n , temp;
+    printf("How many numbers you want to enter : ");
+    scanf("%d", &n);
+    printf("\nEnter the elements : ");
+    for (i=0 ; i<=n-1 ; i++)
+    {
+        scanf("%d", &a[i]);
+    }
+    printf("\nReversed values are ");
+    for (i=n-1 ; i>=0 ; i--)
+    {
+        printf("%d ", a[i]);
+    }
+    return 0;
+}

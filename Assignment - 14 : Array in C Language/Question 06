@@ -1,0 +1,27 @@
+#include<stdio.h>
+int main()
+{
+    int i , j , a[10] , temp ;
+    printf("Enter 10 elements : ");
+    for (i=0; i<=9; i++)
+    {
+        scanf("%d",&a[i]);
+    }
+    for (i=0; i<=9; i++)
+    {
+        for (j=i+1; j<=9; j++)
+        {
+            // checking the two elements which is greater and then swapping their places
+            if(a[i]>a[j])
+            {
+                temp = a[j];
+                a[j] = a[i];
+                a[i] = temp;
+            }
+        }
+    }
+    printf("Sorted elements are ");
+    for (i=0; i<=9; i++)
+    printf("%d ", a[i] );
+    return 0 ;
+}

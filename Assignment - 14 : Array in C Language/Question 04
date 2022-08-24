@@ -1,0 +1,14 @@
+#include<stdio.h>
+int main()
+{
+    int i , a[10] , greatest = -2147483647 ;
+    printf("Enter 10 elements : ");
+    for (i=0; i<=9; i++)
+    {
+        scanf("%d",&a[i]);
+        if(greatest<a[i])
+        greatest = a[i];
+    }
+    printf("greatest number is %d" , greatest);
+    return 0 ;
+}

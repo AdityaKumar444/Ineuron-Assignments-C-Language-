@@ -1,0 +1,17 @@
+#include<stdio.h>
+int main()
+{
+    int i , a[10] , sumof_even = 0 , sumof_odd = 0 ;
+    printf("Enter 10 numbers : ");
+    for (i=0; i<=9; i++)
+    {
+        scanf("%d",&a[i]);
+        if(a[i]%2==0)
+        sumof_even = sumof_even + a[i];
+        else
+        sumof_odd = sumof_odd + a[i];
+    }
+    printf("Sum of even is %d" , sumof_even);
+    printf("\nSum of odd is %d" , sumof_odd);
+    return 0 ;
+}
