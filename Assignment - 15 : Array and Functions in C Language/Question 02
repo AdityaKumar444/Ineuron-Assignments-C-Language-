@@ -1,0 +1,16 @@
+int smallest_no(int[] , int);
+
+//function to find the smallest number from the given array of any size. (TSRS)
+
+int smallest_no(int b[] , int n)
+{
+    int smallest = 2147483647 ;
+    printf("Enter %d elements : " , n);
+    for(int i=0; i<=n-1; i++)
+    {
+        scanf("%d",&b[i]);
+        if(smallest>b[i])
+        smallest = b[i];
+    }
+    return smallest ;
+}
