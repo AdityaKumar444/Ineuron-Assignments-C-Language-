@@ -1,0 +1,14 @@
+int greatest_no(int[] , int);
+
+int greatest_no(int b[] , int n)
+{
+    int greatest = -2147483647 ;
+    printf("Enter %d elements : " , n);
+    for(int i=0; i<=n-1; i++)
+    {
+        scanf("%d",&b[i]);
+        if(greatest<b[i])
+        greatest = b[i];
+    }
+    return greatest ;
+}
