@@ -1,0 +1,25 @@
+int duplicate(int [] , int);
+
+// function in C to count a total number of duplicate elements in an array
+
+int duplicate(int a[] , int n)
+{
+    int i , j , count = 0 ;
+    printf("\nEnter %d elements : " , n) ;
+    for(i=0 ; i<=n-1 ; i++)
+    {
+        scanf("%d" , &a[i]);
+    }
+    for(i=0 ; i<=n-1 ; i++)
+    {
+        for(j=0 ; j<=n-1 ; j++)
+        {
+            if(i==j)
+            j++;
+
+            if(a[i]==a[j])
+            count++;
+        }
+    }
+    return count/2 ;
+}
