@@ -1,0 +1,18 @@
+void reversed_array(int [] , int n);
+
+// function in C to read n number of values in an array and display it in reverse order
+
+void reversed_array(int a[] , int n)
+{
+    int i ;
+    printf("\nEnter %d elements : " , n);
+    for (i=0; i<=n-1 ; i++)
+    {
+        scanf("%d", &a[i]);
+    }
+    printf("\nValues in the array in reverse order\n");
+    for (i=n-1 ; i>=0 ; i--)
+    {
+        printf("%d ", a[i]);
+    }
+}
