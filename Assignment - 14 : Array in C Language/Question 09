@@ -1,7 +1,7 @@
 #include <stdio.h>
 int main()
 {
-    int i , j , a[99999] , n , temp;
+    int i , a[999999] , n ;
     printf("How many numbers you want to enter : ");
     scanf("%d", &n);
     printf("\nEnter the elements : ");
