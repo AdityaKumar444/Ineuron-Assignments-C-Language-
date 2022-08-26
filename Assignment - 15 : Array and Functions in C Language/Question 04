@@ -1,0 +1,49 @@
+void array_rotation(int[] , int);
+
+// function to rotate an array by n position in d direction
+
+void array_rotation(int a[] , int N)
+{
+    int i, j, temp = 0, d, n;
+
+    printf("\nPress 1 for rotating left");
+    printf("\nPress 2 for rotating right");
+    printf("\n\nEnter choice for rotation : ");
+    scanf("%d", &d);
+    printf("\nHow many times you want to rotate : ");
+    scanf("%d", &n);
+
+    printf("\nEnter %d numbers : ", N);
+    for (i = 0; i <= N - 1; i++)
+    {
+        scanf("%d", &a[i]);
+    }
+    if (d == 1) // for left rotation
+        for (i = 1; i <= n; i++)
+        {
+            for (j = 0; j <= N - 2; j++) // swapping places
+            {
+                temp = a[j];
+                a[j] = a[j + 1];
+                a[j + 1] = temp;
+            }
+        }
+    else if (d == 2) // for right rotation
+        for (i = 1; i <= n; i++)
+        {
+            for (j = N - 1; j >= 1; j--) // swapping places
+            {
+                temp = a[j];
+                a[j] = a[j - 1];
+                a[j - 1] = temp;
+            }
+        }
+    else
+        printf("Invalid choice");
+
+    printf("\nThe array after rotation is ");
+    for (i = 0; i <= N - 1; i++)
+    {
+        printf("%d ", a[i]);
+    }
+}
