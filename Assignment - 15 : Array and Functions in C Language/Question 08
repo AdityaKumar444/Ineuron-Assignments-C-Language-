@@ -1,0 +1,29 @@
+void unique(int [] , int);
+
+// function in C to print all unique elements in an array.
+
+void unique(int a[] , int n)
+{
+    int i , j , count ;
+    printf("\nEnter %d elements : " , n) ;
+    for(i=0 ; i<=n-1 ; i++)
+    {
+        scanf("%d" , &a[i]);
+    }
+    printf("\n");
+    for(i=0 ; i<=n-1 ; i++)
+    {
+        count = 0 ;
+        for(j=0 ; j<=n-1 ; j++)
+        {
+            if(i==j)
+            j++;
+
+            if(a[i]==a[j])
+            count++;
+        }
+        if(count==0)
+        printf("%d " , a[i]);
+    }
+    printf(" are the unique elements in the array\n");
+}
