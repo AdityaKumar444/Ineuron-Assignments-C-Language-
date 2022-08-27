@@ -10,7 +10,7 @@ void unique(int a[] , int n)
     {
         scanf("%d" , &a[i]);
     }
-    printf("\n");
+    printf("\nunique elements in the array are :\n");
     for(i=0 ; i<=n-1 ; i++)
     {
         count = 0 ;
@@ -25,5 +25,4 @@ void unique(int a[] , int n)
         if(count==0)
         printf("%d " , a[i]);
     }
-    printf(" are the unique elements in the array\n");
 }
