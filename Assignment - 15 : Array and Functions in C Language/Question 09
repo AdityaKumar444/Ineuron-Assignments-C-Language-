@@ -1,50 +1,25 @@
-void merge_and_sort_two_arrays(int a[], int b[], int sorted[]);
+void merge_two_sorted_arrays(int [], int [], int);
 
-// function in C to merge two arrays and then sorted in descending order
+// function in C to merge two arrays of the same size sorted in descending order
 
-void merge_and_sort_two_arrays(int a[], int b[], int sorted[])
+void merge_two_sorted_arrays(int a[], int b[], int n)
 {
-    int i , j , n1 , n2 , temp , n3 ;
-    printf("Enter the size of first array : ");
-    scanf("%d" ,&n1);                                     // size of first array
-    printf("\nEnter the size of second array : ");
-    scanf("%d" ,&n2);                                    // size of second array
-    printf("\nEnter elements of first array : ");
-    n3 = n1 + n2 ;
-    for(i=0 ; i<n1 ; i++)
+    int sorted[2*n] , i=n-1 , j=n-1 , k ;
+    for(k=0 ; k<2*n ; k++)     // sorting elements and merging them 
     {
-        scanf("%d" ,&a[i]);                 // input for elements of first array
-    }
-    printf("\nEnter elements of second array : ");
-    for(i=0 ; i<n2 ; i++)
-    {
-        scanf("%d" ,&b[i]);                // input for elements of second array
-    }
-    for(i=0 ; i<n1 ; i++)
-    {
-        sorted[i] = a[i] ;     // copying elements of first array in third array
-    }
-    for(i=0 ; i<n2 ; i++)
-    {
-        sorted[i+n1] = b[i] ; // copying elements of second array in third array
-    }
-    for(i=0 ; i<n3 ; i++)                // sorting elements in descending order
-    {
-        for(j=i+1 ; j<n3 ;j++)
+        if(a[i]<b[j] && i>=0 && j>=0)
         {
-            if(i==j)
-            j++;
-
-            if(sorted[i]<sorted[j])
-            {
-                temp = sorted[i] ;
-                sorted[i] = sorted[j] ;
-                sorted[j] = temp ;
-            }
+            sorted[k] = a[i] ;
+            i--;
+        }
+        else
+        {
+            sorted[k] = b[j] ;
+            j--;
         }
     }
-    printf("\nSorted array in descending order :\n");
-    for(i=0 ; i<n3 ; i++)
+    printf("\nMerged array is :\n\n");
+    for(i=0 ; i<2*n ; i++)
     {
         printf("%d ", sorted[i]);
     }
