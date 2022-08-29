@@ -9,13 +9,19 @@ void merge_two_sorted_arrays(int a[], int b[], int n)
     {
         if(i<0)                          
         {
-            sorted[k] = b[j] ;
-            j--;
+            if(j>=0)
+            {
+                sorted[k] = b[j] ;
+                j--;
+            }
         }
         else if(j<0)
         {
-            sorted[k] = a[i] ;
-            i--;
+            if(i>=0)
+            {
+                sorted[k] = a[i] ;
+                i--;
+            }
         }
         else if(a[i]<b[j] && i>=0 && j>=0)
         {
