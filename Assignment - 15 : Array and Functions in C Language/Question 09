@@ -5,13 +5,23 @@ void merge_two_sorted_arrays(int [], int [], int);
 void merge_two_sorted_arrays(int a[], int b[], int n)
 {
     int sorted[2*n] , i=n-1 , j=n-1 , k ;
-    for(k=0 ; k<2*n ; k++)     // sorting elements and merging them 
+    for(k=0 ; k<2*n ; k++)     // sorting and merging elements
     {
-        if(a[i]<b[j] && i>=0 && j>=0)
+        if(i<0)                          
+        {
+            sorted[k] = b[j] ;
+            j--;
+        }
+        else if(j<0)
         {
             sorted[k] = a[i] ;
             i--;
         }
+        else if(a[i]<b[j] && i>=0 && j>=0)
+        {
+            sorted[k] = a[i] ;
+            i--;
+        } 
         else
         {
             sorted[k] = b[j] ;
