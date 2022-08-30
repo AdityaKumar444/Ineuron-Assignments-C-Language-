@@ -1,0 +1,27 @@
+#include<stdio.h>
+int main()
+{
+    int a[3][3] , b[3][3] , product[3][3] , i , j , temp ;
+    printf("Enter the elements of first matrix :\n");
+    for(i=0 ; i<3 ; i++)
+    for(j=0 ; j<3 ; j++)
+    scanf("%d" , &a[i][j]);
+
+    printf("\nEnter the elements of second matrix :\n");
+    for(i=0 ; i<3 ; i++)
+    for(j=0 ; j<3 ; j++)
+    scanf("%d" , &b[i][j]);
+    
+    printf("\nProduct of two matrix is :\n");
+    for(i=0 ; i<3 ; i++)
+    {
+        for(j=0 ; j<3 ; j++)
+        {
+            product[i][j] = a[i][0] * b[0][j]
+                            + a[i][1] * b[1][j]  
+                            + a[i][2] * b[2][j] ;
+            printf("%d " , product[i][j]) ;
+        }
+        printf("\n");
+    }
+}
