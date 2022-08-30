@@ -1,0 +1,21 @@
+#include<stdio.h>
+int main()
+{
+    int a[100][100] , i , j , n , sum=0 ;
+    printf("Enter the size of square matrix : ") ;
+    scanf("%d" , &n); 
+    printf("\nEnter the elements of square matrix :\n") ;
+    for(i=n-1 ; i>=0 ; i--)
+    for(j=n-1 ; j>=0 ; j--)
+    scanf("%d" , &a[i][j]);
+
+    for(i=0 ; i<n ; i++)
+    {
+        for(j=0 ; j<n ; j++)
+        {
+            if(i==j)
+            sum = sum + a[i][j] ;
+        }
+    }
+    printf("\nThe sum of right diagonal elements of the matrix is %d" , sum) ;
+}
