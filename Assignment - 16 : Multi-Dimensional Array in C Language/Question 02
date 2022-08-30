@@ -20,7 +20,7 @@ int main()
             product[i][j] = a[i][0] * b[0][j]
                             + a[i][1] * b[1][j]  
                             + a[i][2] * b[2][j] ;
-            printf("%d " , product[i][j]) ;
+            printf("%2d " , product[i][j]) ;
         }
         printf("\n");
     }
