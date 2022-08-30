@@ -1,39 +1,25 @@
-void frequency_of_elements(int [] , int);
+void frequency_of_elements(int a[] , int arr_size);
 
 // function in C to count the frequency of each element of an array
 
-void frequency_of_elements(int a[] , int n)
+void frequency_of_elements(int a[] , int arr_size)
 {
-    int i , j , count  , c[n] , m = 0 , d ;
-    printf("\nEnter %d elements : " , n) ;
-    for(i=0 ; i<=n-1 ; i++)
+    int i , frequency[99999] = {0} , frequency_negative[99999] = {0};
+    for(i=0 ; i<arr_size ; i++)
     {
-        scanf("%d" , &a[i]);
+        if(a[i]>=0)
+        frequency[a[i]]++ ;
+        else
+        frequency_negative[a[i]*(-1)]++ ;
     }
-    for(i=0 ; i<=n-1 ; i++)
+    for(i=0 ; i<99999 ; i++)
     {
-        count = 1 ;
-        for(j=i+1 ; j<=n-1 ; j++)
-        {
-            if(i==0)
-            c[m] = a[i];
-
-            if(a[i]==a[j])
-            count++;
-        }
-        /* to check the element if it is present in the second array to remove 
-        the duplicacy occurence of frequency of elements*/
-        d = 0 ;
-        if(i>0)
-        {
-            for(j=0 ; j<i ; j++)
-            {
-                if(a[i]==c[j])
-                d++;
-            }
-            c[++m] = a[i] ;
-        }
-        if(d==0)
-        printf("\nfrequency of %d is %d\n" , a[i] , count);
+        if(frequency_negative[i]!=0)
+        printf("\nfrequency of %d is %d" , -i , frequency_negative[i]);
+    }
+    for(i=0 ; i<99999 ; i++)
+    {
+        if(frequency[i]!=0)
+        printf("\nfrequency of %d is %d" , i , frequency[i]);
     }
 }
