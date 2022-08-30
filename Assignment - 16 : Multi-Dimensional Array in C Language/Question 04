@@ -17,5 +17,5 @@ int main()
             sum = sum + a[i][j] ;
         }
     }
-    printf("\nThe sum of right diagonal elements of the matrix is %d" , sum) ;
+    printf("\nThe sum of right diagonal elements of the matrix is %d" , sum);
 }
