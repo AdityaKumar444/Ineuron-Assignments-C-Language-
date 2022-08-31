@@ -1,0 +1,32 @@
+#include<stdio.h>
+int main()
+{
+    int a[1000][1000] , i , j , n1, n2 , count , max = 0 , total_1s = 0 ;
+    printf("Enter the size of rows for matrix : ") ;
+    scanf("%d" , &n1); 
+    printf("Enter the size of columns for matrix : ") ;
+    scanf("%d" , &n2);
+    printf("\nEnter the elements of matrix :\n");
+    for(i=0 ; i<n1 ; i++)
+    for(j=0 ; j<n2 ; j++)
+    scanf("%d" , &a[i][j]);
+
+    for(i=0 ; i<n1 ; i++)
+    {
+        count = 0 ;
+        for(j=0 ; j<n2 ; j++)
+        {
+            if(a[i][j]==1)
+            count++ ;
+        }
+        if(count>total_1s)
+        {
+            max = i+1 ;
+            total_1s = count ;
+        }
+    }
+    if(max==0)
+    printf("\nnumber 1 is not present in matrix");
+    else
+    printf("\nrow with maximum number of 1s is row no. %d" , max) ;
+}
