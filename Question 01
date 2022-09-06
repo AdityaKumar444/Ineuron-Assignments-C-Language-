@@ -1,0 +1,10 @@
+int length(char []);
+
+// function to calculate length of the string
+
+int length(char str[])
+{
+    int i ;
+    for(i=0 ; str[i] ; i++);
+    return i-1 ;
+}
