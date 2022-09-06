@@ -1,0 +1,12 @@
+void reverse(char []);
+
+// function to reverse a string.
+
+void reverse(char str[])
+{
+    int i , count = 0 ;
+    count = strlen(str) - 1 ;
+    printf("\nreversed string is : ");
+    for(i=count-1 ; i>=0 ; i--)
+    printf("%c" , str[i]);
+}
