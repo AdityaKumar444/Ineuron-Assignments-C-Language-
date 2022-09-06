@@ -1,0 +1,15 @@
+#include <stdio.h>
+int main()
+{
+    int i , m ;
+    char str[100000] ;
+    printf("Enter a string : ");
+    fgets(str,100000,stdin);
+    for(i=0 ; str[i] ; i++)
+    {
+        if(str[i]>='A' && str[i]<='Z')
+        str[i] = str[i] + 32 ;
+    }
+    printf("\nconverted string is : %s" , str);
+    return 0;
+}

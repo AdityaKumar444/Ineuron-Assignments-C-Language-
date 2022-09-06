@@ -1,0 +1,19 @@
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+    int i , freq[128]={0} ;
+    char str[100000] ;
+    printf("Enter a string : ");
+    fgets(str,100000,stdin);
+    for(i=0 ; i<(strlen(str)-1) ; i++)
+    {
+        freq[str[i]]++ ;
+    }
+    for(i=1 ; i<128 ; i++)
+    {
+        if(freq[i]!=0)
+        printf("\nfrequency of %c is %d", i ,freq[i]);
+    }
+    return 0;
+}

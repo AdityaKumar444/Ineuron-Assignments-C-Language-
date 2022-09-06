@@ -1,0 +1,12 @@
+#include<stdio.h>
+int main()
+{
+    int i ;
+    char str[100000] , a[100000] ;
+    printf("Enter a string : ");
+    fgets(str,100000,stdin);
+    for(i=0 ; str[i] ; i++)
+    a[i] = str[i] ;
+    printf("\nThe copied string is : \n%s" , a) ;
+    return 0;
+}
