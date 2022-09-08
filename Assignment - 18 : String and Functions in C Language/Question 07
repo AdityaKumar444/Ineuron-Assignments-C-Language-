@@ -1,0 +1,24 @@
+int palindrome(char []);
+
+// function to check whether a given string is palindrome or not
+
+int palindrome(char str[])
+{
+    int i , count = 0 , j , n ;
+    n = strlen(str) - 1 ;
+    j = n - 1 ;
+    for(i=0 ; i<n ; i++)
+    {
+        if(i==j)
+        break;
+        if(str[i]==str[j])
+        {
+            j--;
+            count++;
+        }
+        else
+        return 0 ;   
+    }
+    if(count>=1)
+    return 1 ;
+}

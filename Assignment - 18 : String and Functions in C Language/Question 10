@@ -1,0 +1,18 @@
+void repeated_characters(char []);
+
+// function to find the repeated character in a given string
+
+void repeated_characters(char str[])
+{
+    int i , freq[128]={0} ;
+    for(i=0 ; str[i] ; i++)
+    {
+        freq[str[i]]++ ;
+    }
+    printf("\nrepeated characters are :\n");
+    for(i=1 ; i<128 ; i++)
+    {
+        if(freq[i]>1)
+        printf("%c\n", i);
+    }
+}

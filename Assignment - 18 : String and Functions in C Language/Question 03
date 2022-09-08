@@ -1,0 +1,23 @@
+void compare(char [] , char []);
+
+// function to compare two strings
+
+void compare(char str[] , char str1[])
+{
+    int i , count , n ;
+    if(strlen(str)==strlen(str1))
+    {
+        n = strlen(str) ;
+        for(i=0 ; i<n-1 ; i++)
+        {
+            if(str[i]==str1[i])
+            count++ ;
+        }
+    if(count == i)
+    printf("\nStrings are equal") ;
+    else
+    printf("\nStrings are not equal") ;
+    }
+    else
+    printf("\nStrings are not equal") ;
+}
