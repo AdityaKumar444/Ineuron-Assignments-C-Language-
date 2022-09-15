@@ -1,0 +1,29 @@
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+    int i , j ;
+    char str[10][25] , temp[25];
+    printf("Enter 10 city names : \n");
+    for(i=0 ; i<10 ; i++)
+    {
+        fgets(str[i] , 25 , stdin);
+        int len = strlen(str[i]);
+        if (len > 0 && str[i][len - 1] == '\n')
+        str[i][len - 1] = '\0';
+    }
+    printf("\nSorted city names are :\n");
+    for(i=0 ; i<10 ; i++)
+    {
+        for(j=i+1 ; j<10 ; j++)
+        {
+            if(strcmp(str[i],str[j]) > 0)
+            {
+                strcpy(temp,str[i]);
+                strcpy(str[i],str[j]);
+                strcpy(str[j],temp);
+            }
+        }
+        printf("\n%s",str[i]);
+    }
+}

@@ -1,0 +1,35 @@
+#include<stdio.h>
+#include<string.h>
+#include<stdlib.h>
+void IP(char[]);
+int main()
+{
+    int i , n ;
+    char str[1000][30] ;
+    printf("How many IP addresses you want to input : ");
+    scanf("%d",&n);
+    printf("\nEnter IP addresses :\n");
+    for(i=0 ; i<n ; i++)
+    scanf("%s",str[i]);
+    printf("\n");
+    for(i=0 ; i<n ; i++)
+    IP(str[i]) ;
+}
+void IP(char str[])
+{
+    char st[20];
+    strcpy(st,str);
+    int count = 0 , x ;
+    char *a = strtok(str ,".");
+    while (a!=NULL)
+    {
+        x = atoi(a);
+        if(x>=0 && x<=255)
+        count++;
+        a = strtok(NULL,".");
+    }
+    if(count==4)
+    printf("%s = valid IP address\n", st);
+    else
+    printf("%s = invalid IP address\n", st);
+}
