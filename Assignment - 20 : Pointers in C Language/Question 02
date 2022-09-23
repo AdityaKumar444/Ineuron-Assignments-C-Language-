@@ -1,0 +1,11 @@
+void swap(char * , char * , int);
+
+// function to swap strings of two char arrays using pointers
+
+void swap(char *p , char *q , int size)
+{
+    char temp[size];
+    strcpy(temp , p);
+    strcpy(p , q);
+    strcpy(q , temp); 
+}
