@@ -1,0 +1,14 @@
+#include<stdio.h>
+int main()
+{
+    int a[10000] , *p , n , i , sum = 0 ;
+    p = a ;
+    printf("How many numbers you want to enter : ");
+    scanf("%d",&n);
+    printf("Enter %d numbers :\n",n);
+    for(i=0 ; i<n ; i++)
+    scanf("%d",&a[i]);
+    for(i=0 ; i<n ; i++)
+    sum = sum + p[i] ;
+    printf("\nSum is %d",sum);
+}
