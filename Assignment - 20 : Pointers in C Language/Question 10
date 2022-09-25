@@ -1,0 +1,15 @@
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+    char a[10000] , *p ;
+    p = a ;
+    printf("Enter a string : ");
+    fgets(a,10000,stdin);
+    int len = strlen(a) , j ;
+    if (len > 0 && a[len - 1] == '\n')
+    a[len - 1] = '\0';
+    printf("\nstring in reverse order is : ");
+    for(j=len-1 ; j>=0 ; j--)
+    printf("%c",p[j]);
+}
