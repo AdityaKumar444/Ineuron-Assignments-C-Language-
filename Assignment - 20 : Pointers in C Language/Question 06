@@ -1,0 +1,12 @@
+#include<stdio.h>
+int main()
+{
+    int i ;
+    char str[10000];
+    char *p ;
+    p = str ;
+    printf("Enter a string :\n");
+    fgets(str,10000,stdin);
+    for(i=0 ; p[i] ; i++);
+    printf("length of the string = %d",i-1);
+}
