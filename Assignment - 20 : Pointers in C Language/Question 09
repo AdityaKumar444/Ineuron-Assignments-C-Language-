@@ -1,0 +1,14 @@
+#include<stdio.h>
+int main()
+{
+    int a[10000] , *p , n , i ;
+    p = a ;
+    printf("How many numbers you want to enter : ");
+    scanf("%d",&n);
+    printf("Enter %d numbers :\n",n);
+    for(i=0 ; i<n ; i++)
+    scanf("%d",&a[i]);
+    printf("\nelements of an array in reverse order is :\n");
+    for(i=n-1 ; i>=0 ; i--)
+    printf("%d ",p[i]);
+}
