@@ -1,0 +1,14 @@
+struct Employee input(struct employee);
+
+// function to take input employee data from the user
+
+struct Employee input(struct employee b)
+{
+    printf("Enter employee id : ");
+    scanf("%d",&b.id);
+    printf("\nEnter employee name : ");
+    fgets(b.name , 50 , stdin);
+    printf("\nEnter employee salary : ");
+    scanf("%f",&b.salary);
+    return b ;
+}
