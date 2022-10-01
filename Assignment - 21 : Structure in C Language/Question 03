@@ -1,0 +1,10 @@
+void display(struct employee);
+
+// function to display employee data
+
+void display(struct employee b)
+{
+    printf("employee id = %d",b.id);
+    printf("\nemployee name = %s",b.name);
+    printf("\nemployee salary = %f",b.salary);
+}
