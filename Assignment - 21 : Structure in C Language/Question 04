@@ -1,0 +1,22 @@
+struct employee
+{
+    int id ;
+    char name[50] ;
+    float salary ;
+};
+void highest_salary(struct employee [] , struct employee , int);
+
+// function to find the highest salary employee from a given array of 10 employees
+
+void highest_salary(struct employee b[] , struct employee a , int size)
+{
+    a.salary = 0 ;
+    int i ;
+    for (i=0 ; i<size ; i++)
+    {
+        if(a.salary < b[i].salary)
+        a = b[i] ;
+    }
+    printf("\nHighest salary employee is %s", a.name);
+    printf("\nSalary = %f", a.salary);
+}
