@@ -1,0 +1,25 @@
+struct employee
+{
+    int id ;
+    char name[50] ;
+    float salary ;
+};
+void sort_salary(struct employee b[] , struct employee temp , int size);
+
+// function to sort employees according to their salaries
+
+void sort_salary(struct employee b[] , struct employee temp , int size)
+{
+    for (int i = 0; i < size; i++)
+    for (int j = i+1; j < size; j++)
+    {
+        if(b[i].salary > b[j].salary)
+        {
+            temp = b[j] ;
+            b[j] = b[i] ;    
+            b[i] = temp ;
+        }
+    }
+    for (int i = 0; i < size; i++)
+    printf("\n%d %s %f", b[i].id , b[i].name , b[i].salary);
+}
