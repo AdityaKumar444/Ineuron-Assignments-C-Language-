@@ -1,0 +1,40 @@
+#include<stdio.h>
+#include<string.h>
+struct students 
+{
+    char name[50] , section[20] ;
+    int roll_no , class ;
+};
+int main()
+{
+    struct students a[10] ;
+    for (int i = 0; i < 10; i++)
+    {
+        printf("Enter name : ");
+        fflush(stdin);
+        fgets(a[i].name , 50 , stdin);
+        int len = strlen(a[i].name);
+        if (len > 0 && a[i].name[len - 1] == '\n')
+        a[i].name[len - 1] = '\0';
+        printf("Enter class : ");
+        scanf("%d",&a[i].class);
+        printf("Enter section : ");
+        fflush(stdin);
+        fgets(a[i].section , 20 , stdin);
+        int length = strlen(a[i].section);
+        if (length > 0 && a[i].section[length - 1] == '\n')
+        a[i].section[length - 1] = '\0';
+        printf("Enter roll no. : ");
+        scanf("%d",&a[i].roll_no);
+        printf("\n");
+    }
+    printf("\nDisplaying student information :\n");
+    for (int i = 0; i < 10; i++)
+    {
+        printf("\nName     : %s",a[i].name);
+        printf("\nClass    : %d",a[i].class);
+        printf("\nSection  : %s",a[i].section);
+        printf("\nRoll No. : %d\n",a[i].roll_no);
+    }
+    return 0 ;
+}
