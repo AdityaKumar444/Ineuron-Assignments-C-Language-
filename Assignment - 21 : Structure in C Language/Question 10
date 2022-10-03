@@ -1,0 +1,39 @@
+#include<stdio.h>
+#include<string.h>
+struct marks
+{
+    char name[50] ;
+    int roll_no ,  chem_marks , maths_marks ,  phy_marks ;
+};
+int main()
+{
+    struct marks a[5] ;
+    float percentage[5] ;
+    for (int i = 0; i < 5; i++)
+    {
+        printf("\nEnter name : ");
+        fflush(stdin);
+        fgets(a[i].name , 50 , stdin);
+        int len = strlen(a[i].name);
+        if (len > 0 && a[i].name[len - 1] == '\n')
+        a[i].name[len - 1] = '\0';
+        printf("Enter roll no. : ");
+        scanf("%d",&a[i].roll_no);
+        printf("Enter chemistry marks : ");
+        scanf("%d",&a[i].chem_marks);
+        printf("Enter maths marks : ");
+        scanf("%d",&a[i].maths_marks);
+        printf("Enter physics marks : ");
+        scanf("%d",&a[i].phy_marks);
+        int total = a[i].chem_marks + a[i].maths_marks + a[i].phy_marks ;
+        percentage[i] = ( total * 100 ) / 300.0 ;
+    }
+    printf("\nDisplaying students percentage :\n");
+    for (int i = 0; i < 5; i++)
+    {
+        printf("\nName       : %s",a[i].name);
+        printf("\nRoll No.   : %d",a[i].roll_no);
+        printf("\nPercentage : %f\n",percentage[i]);
+    }
+    return 0 ;
+}
