@@ -1,0 +1,23 @@
+void variable_string();
+
+/* function to input variable length string and store it in an array without
+memory wastage */
+
+void variable_string()
+{
+    int count = 1 , i = 0 ;
+    char *p , ch ;
+    p = (char*)malloc(sizeof(char));
+    printf("Enter the string : ");
+    while (ch!='\n')
+    {
+        scanf("%c",&ch);
+        count++;
+        p = (char*)realloc(p,count*sizeof(char));
+        p[i] = ch ;
+        i++ ;
+    }
+    p[i] = '\0' ;
+    printf("\nString is : %s",p);
+    free(p);
+}
