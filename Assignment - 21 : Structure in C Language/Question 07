@@ -13,16 +13,22 @@ int main ()
     printf("\nEnter hour , minute and second : \n");
     scanf("%d %d %d",&b.hour,&b.minute,&b.second);
 
-    difference.hour = a.hour - b.hour ;
-    difference.minute = a.minute - b.minute ;
-    difference.second = a.second - b.second ;
+    if(b.second < a.second)
+    {
+        b.second = b.second + 60 ;
+        b.minute = b.minute - 1 ;
+    }
+    if(b.minute < a.minute)
+    {
+        b.minute = b.minute + 60 ;
+        b.hour = b.hour - 1 ;
+    }
+    if(b.hour < a.hour)
+    b.hour = b.hour + 12 ;
 
-    if(difference.hour < 0 )
-    difference.hour = (-1) * difference.hour ;
-    if(difference.minute < 0)
-    difference.minute = (-1) * difference.minute ;
-    if(difference.second < 0)
-    difference.second = (-1) * difference.second ;
+    difference.hour = b.hour - a.hour ;
+    difference.minute = b.minute - a.minute ;
+    difference.second = b.second - a.second ;
 
     printf("\ntime difference is %d hours : %d minutes : %d seconds",difference.hour,difference.minute,difference.second);
     return 0 ;
