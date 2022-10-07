@@ -1,0 +1,20 @@
+#include<stdio.h>
+#include<stdlib.h>
+int main()
+{
+    int count = 1 , i = 0 ;
+    char *p , ch ;
+    p = (char*)malloc(sizeof(char));
+    printf("Enter the text : ");
+    while (ch!='\n')
+    {
+        scanf("%c",&ch);
+        count++;
+        p = (char*)realloc(p,count*sizeof(char));
+        p[i] = ch ;
+        i++ ;
+    }
+    p[i] = '\0' ;
+    printf("\nText is : %s",p);
+    free(p);
+}

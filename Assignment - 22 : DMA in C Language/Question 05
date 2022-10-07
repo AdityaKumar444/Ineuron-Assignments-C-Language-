@@ -1,0 +1,20 @@
+#include<stdio.h>
+#include<stdlib.h>
+int main()
+{
+    int *p , n , i , sum = 0 ;
+    printf("Enter size of array : ");
+    scanf("%d",&n);
+    p = (int*)calloc(n,sizeof(int));
+    printf("\nEnter elements : ");
+    for ( i = 0; i < n; i++)
+    scanf("%d",&p[i]);
+    for ( i = 0; i < n; i++)
+    sum = sum + p[i] ;
+    system("cls");
+    printf("\nEntered numbers are : ");
+    for ( i = 0; i < n; i++)
+    printf("%d ",p[i]);
+    printf("\n\nSum is %d",sum);
+    free(p);
+}
