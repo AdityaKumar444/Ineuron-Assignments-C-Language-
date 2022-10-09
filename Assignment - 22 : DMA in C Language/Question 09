@@ -1,0 +1,19 @@
+#include<stdio.h>
+#include<stdlib.h>
+int main()
+{
+    int *p1 , *p2 ;
+    p1 = (int*)malloc(2000000000 * sizeof(int));
+    p2 = (int*)malloc(20000000000 * sizeof(int));
+
+    if (p1 == NULL)
+    printf("memory allocation failed for 1st variable\n");
+    else
+    printf("memory allocation success for 1st variable\n");
+
+    if (p2 == NULL)
+    printf("memory allocation failed for 2nd variable\n");
+    else
+    printf("memory allocation success for 2nd variable\n");
+    return 0 ;
+}
