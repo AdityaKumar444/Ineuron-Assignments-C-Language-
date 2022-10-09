@@ -1,0 +1,13 @@
+#include<stdio.h>
+#include<stdlib.h>
+int main()
+{
+    char *p ;
+    p = (char*)malloc(20 * sizeof(char)); // pointing memory location of variable
+    *p = 'C' ;   // assigned value in variable
+    printf("%c",*p);
+    printf("\n%d",p); // printing the address of variable
+    free(p);        // freeing the memory
+    printf("\n%d",p);   // still holds the address of varible which is freed from memory
+    return 0 ;
+}
