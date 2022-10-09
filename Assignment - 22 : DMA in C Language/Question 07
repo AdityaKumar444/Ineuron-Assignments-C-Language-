@@ -1,0 +1,13 @@
+#include<stdio.h>
+#include<stdlib.h>
+int main()
+{
+    int *p ;
+    p = (int*)malloc(sizeof(int));
+    printf("%d",p); // contains the address of DMA variable given above
+    p = NULL ;
+    printf("\n%d",p);  // conatins NULL , no address
+    printf("\n%d",(int*)malloc(sizeof(int))); // new variable address got printed when tried to access previous variable
+                                                 because no pointer is pointing its address
+    return 0 ;
+}
