@@ -1,0 +1,24 @@
+#include<stdio.h>
+#include<stdlib.h>
+int main()
+{
+    int *p , n , i , max = -9999999 , min = 9999999 ;
+    printf("Enter size of array : ");
+    scanf("%d",&n);
+    p = (int*)calloc(n,sizeof(int));
+    printf("\nEnter elements : ");
+    for ( i = 0; i < n; i++)
+    scanf("%d",&p[i]);
+    for ( i = 0; i < n; i++)
+    {
+        if(p[i] > max)
+        max = p[i];
+
+        if(p[i] < min)
+        min = p[i];
+    }
+    printf("\nmaximum element is %d",max);
+    printf("\nminimum element is %d",min);
+    free(p);
+    return 0 ;
+}
