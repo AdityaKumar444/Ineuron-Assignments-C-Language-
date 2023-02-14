@@ -1,0 +1,13 @@
+#include<stdio.h>
+int sumOfsumOfDigits(int);
+int sum = 0 , rem ;
+int sumOfsumOfDigits(int n)
+{
+    if(n>0)
+    {
+        rem = n % 10 ;
+        sum = sum + rem ;
+        sumOfsumOfDigits(n/10) ;
+    }
+    return sum ;
+}
