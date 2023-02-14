@@ -1,0 +1,10 @@
+#include<stdio.h>
+void printNaturalEven_rev(int);
+void printNaturalEven_rev(int n)
+{
+    if(n>0)
+    {
+        printf("%d ", n*2);
+        printNaturalEven_rev(n-1);
+    }   
+}
