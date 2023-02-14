@@ -1,0 +1,10 @@
+#include<stdio.h>
+void printNatural_reverse(int);
+void printNatural_reverse(int n)
+{
+    if(n>0)
+    {
+        printf("%d ", n);
+        printNatural_reverse(n-1);
+    }
+}
