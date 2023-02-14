@@ -1,0 +1,10 @@
+#include<stdio.h>
+void printNaturalOdd(int);
+void printNaturalOdd(int n)
+{
+    if(n>0)
+    {
+        printNaturalOdd(n-1);
+        printf("%d ", n*2-1);
+    }   
+}
