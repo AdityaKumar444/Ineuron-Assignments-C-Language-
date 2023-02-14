@@ -1,11 +1,11 @@
 #include<stdio.h>
-int sumOfOdd(int);
-int sumOfOdd(int n)
+int sumOfEven(int);
+int sumOfEven(int n)
 {
     int sum = 0 ;
     if(n>0)
     {
-        sum = n*2-1 + sumOfOdd(n-1) ;
+        sum = n*2 + sumOfEven(n-1) ;
     }
     return sum ;
 }
