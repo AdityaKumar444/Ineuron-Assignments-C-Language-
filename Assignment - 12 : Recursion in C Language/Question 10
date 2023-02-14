@@ -1,0 +1,14 @@
+#include<stdio.h>
+void reverse(int);
+int sum = 0 , rem ;
+void reverse(int num)
+{
+    if(num)
+    {
+        rem = num % 10 ;
+        sum = sum * 10 + rem ;
+        reverse(num/10);
+    }
+    else
+    printf("%d", sum);
+}
