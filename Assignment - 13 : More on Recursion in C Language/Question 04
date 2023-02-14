@@ -1,0 +1,11 @@
+#include<stdio.h>
+int sumOfSquares(int);
+int sumOfSquares(int n)
+{
+    int sum = 0 ;
+    if(n>0)
+    {
+        sum = n*n + sumOfSquares(n-1) ;
+    }
+    return sum ;
+}
