@@ -1,0 +1,10 @@
+#include<stdio.h>
+void printNaturalEven(int);
+void printNaturalEven(int n)
+{
+    if(n>0)
+    {
+        printNaturalEven(n-1);
+        printf("%d ", n*2);
+    }   
+}
