@@ -1,0 +1,10 @@
+#include<stdio.h>
+int sumOfNatural(int);
+int sumOfNatural(int n)
+{
+    int sum = 0 ;
+    if(n==1)
+    return 1 ;
+    sum = n + sumOfNatural(n-1) ;
+    return sum ;
+}
