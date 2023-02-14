@@ -1,0 +1,10 @@
+#include<stdio.h>
+void printNatural(int);
+void printNatural(int n)
+{
+    if(n>0)
+    {
+        printNatural(n-1);
+        printf("%d " , n);
+    }
+}
