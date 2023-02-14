@@ -1,0 +1,10 @@
+#include<stdio.h>
+void dec_to_oct(int);
+void dec_to_oct(int n)
+{
+    if(n>0)
+    {
+        dec_to_oct(n/8);
+        printf("%d", n%8);
+    }   
+} 
