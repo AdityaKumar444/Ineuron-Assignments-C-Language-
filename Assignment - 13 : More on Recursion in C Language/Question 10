@@ -1,0 +1,21 @@
+#include<stdio.h>
+int power(int,int);
+unsigned long long int res = 1 ; 
+int main ()  
+{
+    int num , pow ;
+    printf("Enter number : ");
+    scanf("%d",&num);
+    printf("Enter power : ");
+    scanf("%d",&pow);
+    printf("\n%d",power(num,pow));
+    return 0 ;
+}
+int power(int num , int pow)
+{
+    if(pow>0)
+    {
+        res = num * power(num , pow-1);
+    }
+    return res ;
+} 
