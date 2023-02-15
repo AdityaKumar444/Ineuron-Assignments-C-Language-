@@ -1,0 +1,19 @@
+#include<stdio.h>
+int HCF(int,int);
+int div = 0 , hcf ;
+int HCF(int n1 , int n2)
+{
+    div++;
+    int x ;
+    if(n1 > n2)
+    x = n1 ;
+    else
+    x = n2 ; 
+    if(div<=x)
+    {
+        if(n1%div==0 && n2%div==0)
+        hcf = div ;
+        HCF(n1,n2);
+    }
+    return hcf ;
+} 
