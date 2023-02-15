@@ -1,0 +1,19 @@
+#include<stdio.h>
+int CountDigits(long long);
+int count = 0 ; 
+int main ()  
+{
+    long long n ;
+    printf("Enter a number : ");
+    scanf("%d",&n);
+    printf("\nTotal digits are = %d" , CountDigits(n));
+}
+int CountDigits(long long n)
+{
+    if(n>0)
+    {
+        count++;
+        CountDigits(n/10);
+    }
+    return count ;
+} 
