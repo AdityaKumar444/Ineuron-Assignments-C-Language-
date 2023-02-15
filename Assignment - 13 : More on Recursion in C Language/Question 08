@@ -1,0 +1,15 @@
+#include<stdio.h>
+int Fibonacci(int);
+int n1=-1 , n2=1 ;
+int Fibonacci(int n)
+{
+    if(n>0)
+    {
+        int n3 ;
+        n3 = n1 + n2 ;
+        n1 = n2 ;
+        n2 = n3 ;
+        printf("%d ", n3);
+        Fibonacci(n-1);
+    }
+} 
