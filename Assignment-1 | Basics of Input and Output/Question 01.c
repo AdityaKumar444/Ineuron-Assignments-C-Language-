@@ -5,5 +5,3 @@ int main()
 printf("Hello Students");
 getch();
 }
-
-
